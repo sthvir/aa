@@ -1,0 +1,205 @@
+:root {
+    --primary-color: #0d6efd; /* Bootstrap Blue for main actions */
+    --accent-color: #20c997; /* Teal for 9th-B highlight */
+    --dark-bg: #1a1a1a; /* Dark background for header/footer */
+    --light-dark: #292d33; /* Slightly lighter dark for section backgrounds */
+    --text-light: #f8f9fa;
+    --text-secondary: #adb5bd; /* Light grey for body text */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #212529; /* Dark background for overall site */
+    color: var(--text-light);
+}
+
+.section-padding { padding: 5rem 0; }
+.section-title { font-size: 3rem; font-weight: 700; margin-bottom: 3rem; text-align: center; color: var(--text-light); }
+.btn-custom-primary { background-color: var(--primary-color); border: 2px solid var(--primary-color); color: white; padding: 0.75rem 1.5rem; font-weight: 600; transition: all 0.3s ease; }
+.btn-custom-primary:hover { background-color: transparent; color: var(--primary-color); }
+
+/* --- Navigation Bar --- */
+.navbar-custom { background-color: var(--dark-bg); border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
+.section-badge { color: var(--accent-color); font-weight: 400; }
+.nav-link { font-weight: 500; color: rgba(255, 255, 255, 0.8) !important; transition: color 0.3s ease, border-bottom 0.3s ease; border-bottom: 3px solid transparent; }
+.nav-link:hover, .nav-link.active { color: var(--accent-color) !important; border-bottom: 3px solid var(--accent-color); }
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 90vh;
+    background-image: url('allaint-main-page.avif'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.75); 
+}
+.hero-content h1 { font-size: 4rem; font-weight: 900; margin-bottom: 0.5rem; }
+.hero-content h1 .section-identifier { color: var(--accent-color); }
+
+/* --- About/Mission Section --- */
+.bg-light-dark {
+    background-color: var(--light-dark);
+}
+
+/* --- Student Card Styling --- */
+.custom-card { background-color: #343a40; border: none; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; padding: 1.5rem; height: 100%; }
+.custom-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7); }
+.student-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid var(--accent-color); margin-bottom: 1rem; }
+
+/* --- NEW: 9th-B Spotlight Cards --- */
+.spotlight-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+.spotlight-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.spotlight-card:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+.spotlight-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+    color: white;
+    padding: 1.5rem;
+    transition: background 0.5s ease;
+}
+.spotlight-card:hover .overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+}
+.spotlight-card .overlay h5 {
+    color: var(--accent-color);
+}
+
+/* --- Footer Customization --- */
+.footer-custom {
+    background-color: var(--dark-bg);
+    color: var(--text-secondary);
+}
+.footer-custom a {
+    color: var(--text-light);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+.footer-custom a:hover {
+    color: var(--accent-color);
+}
+.copyright-bar {
+    background-color: #111; /* Even darker background for the bottom strip */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Adjustments (Unchanged) */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1rem; }
+    .section-title { font-size: 2rem; }
+}
+
+:root {
+    --primary-color: #0d6efd; /* Bootstrap Blue for main actions */
+    --accent-color: #20c997; /* Teal for 9th-B highlight */
+    --dark-bg: #1a1a1a; /* Dark background for header/footer */
+    --light-dark: #292d33; /* Slightly lighter dark for section backgrounds */
+    --text-light: #f8f9fa;
+    --text-secondary: #adb5bd; 
+    --glow-color: #20c997; /* Use accent color for glow */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #212529; 
+    color: var(--text-light);
+}
+
+.section-padding { padding: 5rem 0; }
+.section-title { font-size: 3rem; font-weight: 700; margin-bottom: 3rem; text-align: center; color: var(--text-light); }
+
+/* --- Glow Button Enhancement --- */
+.btn-custom-primary { 
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.4); /* Subtle glow */
+    color: white; 
+    padding: 0.75rem 1.5rem; 
+    font-weight: 600; 
+    transition: all 0.4s ease;
+}
+.btn-custom-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.8); /* Brighter glow on hover */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    /* ... (rest of the hero CSS remains the same) */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.75), 0 5px 20px rgba(0,0,0,0.5); /* Added bottom shadow */
+}
+
+/* --- Student Card GLOW Enhancement --- */
+.custom-card { 
+    background-color: #343a40; 
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center; 
+    padding: 1.5rem; 
+    height: 100%; 
+}
+
+.custom-card:hover { 
+    transform: translateY(-8px) scale(1.02); /* More aggressive lift */
+    box-shadow: 0 0 25px var(--glow-color); /* **THE GLOW EFFECT** */
+    border: 1px solid var(--glow-color);
+}
+.student-img { 
+    /* ... (rest of student-img CSS) */
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(32, 201, 151, 0.7); /* Subtle glow around image */
+}
+
+/* --- About Section Image GLOW Enhancement --- */
+.bg-light-dark img {
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color); /* **Glow around the image** */
+    transition: box-shadow 0.5s ease;
+}
+.bg-light-dark img:hover {
+    box-shadow: 0 0 35px var(--accent-color);
+}
+
+
+/* --- Notes/Resource Card Enhancement --- */
+.note-card {
+    background-color: #343a40;
+    border-left: 8px solid var(--primary-color); /* Thicker border */
+    transition: border-left 0.3s ease;
+}
+.note-card:hover {
+    border-left: 8px solid var(--accent-color); /* Color change on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* --- NEW: Upload Button for Resources Page --- */
+#notes-upload-link {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
